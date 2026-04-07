@@ -27,6 +27,34 @@ const sources = [
     label: "Better Stack \u2014 Best Sandbox Runners",
     href: "https://betterstack.com/community/comparisons/best-sandbox-runners/",
   },
+  {
+    label: "Modal \u2014 Coding Agents",
+    href: "https://modal.com/solutions/coding-agents",
+  },
+  {
+    label: "Kagent \u2014 Solo.io",
+    href: "https://www.solo.io/products/kagent",
+  },
+  {
+    label: "LangChain \u2014 LangSmith Deployment",
+    href: "https://www.langchain.com/langsmith/deployment",
+  },
+  {
+    label: "Temporal.io",
+    href: "https://temporal.io",
+  },
+  {
+    label: "Lindy AI",
+    href: "https://www.lindy.ai",
+  },
+  {
+    label: "Relevance AI",
+    href: "https://relevanceai.com",
+  },
+  {
+    label: "Cognition AI \u2014 Devin",
+    href: "https://devin.ai",
+  },
 ];
 
 export function Sources() {
@@ -38,9 +66,9 @@ export function Sources() {
       <p className="mb-10 text-center text-3xl font-bold">Sources</p>
 
       <div className="rounded-2xl border border-card-border bg-card p-6">
-        <ul className="space-y-3">
+        <ul className="columns-1 gap-x-8 space-y-3 sm:columns-2">
           {sources.map((s) => (
-            <li key={s.href} className="flex items-start gap-3">
+            <li key={s.href} className="flex items-start gap-3 break-inside-avoid">
               <svg
                 className="mt-0.5 h-4 w-4 shrink-0 text-accent"
                 fill="none"

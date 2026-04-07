@@ -1,8 +1,11 @@
 import {
   Hero,
-  ComparisonTable,
-  PlatformCards,
-  UseCases,
+  CategoryNav,
+  SandboxSection,
+  OrchestrationSection,
+  ManagedSection,
+  CloudHostingSection,
+  MasterTable,
   Sources,
   Footer,
 } from "@/components";
@@ -11,9 +14,12 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <PlatformCards />
-      <ComparisonTable />
-      <UseCases />
+      <CategoryNav />
+      <SandboxSection />
+      <OrchestrationSection />
+      <ManagedSection />
+      <CloudHostingSection />
+      <MasterTable />
       <Sources />
       <Footer />
     </main>

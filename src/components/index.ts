@@ -1,6 +1,9 @@
 export { Hero } from "./Hero";
-export { PlatformCards } from "./PlatformCards";
-export { ComparisonTable } from "./ComparisonTable";
-export { UseCases } from "./UseCases";
+export { CategoryNav } from "./CategoryNav";
+export { SandboxSection } from "./SandboxSection";
+export { OrchestrationSection } from "./OrchestrationSection";
+export { ManagedSection } from "./ManagedSection";
+export { CloudHostingSection } from "./CloudHostingSection";
+export { MasterTable } from "./MasterTable";
 export { Sources } from "./Sources";
 export { Footer } from "./Footer";

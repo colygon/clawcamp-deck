@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Agent Hosting Compared | Daytona vs E2B vs Sprites.dev",
+  title: "Agent Hosting Compared | 21 Platforms Side by Side",
   description:
-    "Side-by-side comparison of the top AI agent hosting platforms: Daytona, E2B, and Sprites.dev. Compare isolation, persistence, pricing, and more.",
+    "Compare 21 AI agent hosting platforms across sandboxes, orchestration, managed services, and cloud/VPS. Daytona, E2B, Sprites, Modal, LangGraph, Temporal, and more.",
 };
 
 export default function RootLayout({
