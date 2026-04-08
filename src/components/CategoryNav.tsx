@@ -23,7 +23,7 @@ const categories = [
   {
     label: "Cloud Hosting & VPS",
     anchor: "#cloud",
-    count: 11,
+    count: 14,
     description: "General-purpose compute for self-hosted agent stacks",
     color: "text-emerald-400",
   },

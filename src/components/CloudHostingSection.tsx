@@ -115,6 +115,36 @@ const vpsProviders = [
       { label: "Starting", value: "Custom (dedicated)" },
     ],
   },
+  {
+    name: "Contabo",
+    tagline: "German provider with aggressive pricing on VPS, bare metal, and GPU cloud (L40S, H200)",
+    highlights: [
+      { label: "Type", value: "VPS + Bare Metal + GPU" },
+      { label: "GPU", value: "Yes (L40S, H200)" },
+      { label: "Regions", value: "EU, US, APAC (11 DCs)" },
+      { label: "Starting", value: "\u20ac3.60/mo (VPS)" },
+    ],
+  },
+  {
+    name: "Claw Cloud",
+    tagline: "Developer cloud with VPS, VDS, and ClawCloud Run container platform with free tier",
+    highlights: [
+      { label: "Type", value: "VPS + Containers (Run)" },
+      { label: "GPU", value: "No" },
+      { label: "Regions", value: "Singapore + multi-AZ" },
+      { label: "Starting", value: "Free tier / $1.50/mo" },
+    ],
+  },
+  {
+    name: "ClawHost",
+    tagline: "Open-source one-click deployment platform purpose-built for OpenClaw AI agents",
+    highlights: [
+      { label: "Type", value: "Managed VPS (via Hetzner)" },
+      { label: "GPU", value: "No" },
+      { label: "Agent Tooling", value: "Built-in (OpenClaw)" },
+      { label: "Starting", value: "$25/mo" },
+    ],
+  },
 ];
 
 function PlatformCard({

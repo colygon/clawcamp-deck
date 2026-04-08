@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Agent Hosting Compared | 21 Platforms Side by Side",
+  title: "Agent Hosting Compared | 24 Platforms Side by Side",
   description:
-    "Compare 21 AI agent hosting platforms across sandboxes, orchestration, managed services, and cloud/VPS. Daytona, E2B, Sprites, Modal, LangGraph, Temporal, and more.",
+    "Compare 24 AI agent hosting platforms across sandboxes, orchestration, managed services, and cloud/VPS. Daytona, E2B, Sprites, Modal, LangGraph, Temporal, Contabo, and more.",
 };
 
 export default function RootLayout({
