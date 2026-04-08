@@ -28,7 +28,7 @@ const categories = [
     color: "text-emerald-400",
   },
   {
-    label: "GPU Compute / NeoCloud",
+    label: "NeoCloud",
     anchor: "#gpu-compute",
     count: 1,
     description: "Serverless GPU infrastructure for AI training and inference",

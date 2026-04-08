@@ -22,7 +22,7 @@ export function GpuComputeSection() {
         <p className="text-sm font-medium uppercase tracking-widest text-yellow-400">
           Category 5
         </p>
-        <h2 className="mt-1 text-3xl font-bold">GPU Compute / NeoCloud</h2>
+        <h2 className="mt-1 text-3xl font-bold">NeoCloud</h2>
         <p className="mt-2 max-w-2xl text-sm text-muted">
           Serverless and on-demand GPU infrastructure for AI training,
           fine-tuning, and inference. These platforms provide raw GPU power

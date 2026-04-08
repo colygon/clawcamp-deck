@@ -30,7 +30,7 @@ export function Hero() {
             Cloud &amp; VPS
           </a>
           <a href="#gpu-compute" className="rounded-full border border-card-border px-6 py-2.5 text-sm font-semibold text-foreground transition hover:border-accent">
-            GPU Compute
+            NeoCloud
           </a>
           <a href="#master-table" className="rounded-full border border-card-border px-6 py-2.5 text-sm font-semibold text-foreground transition hover:border-accent">
             Full Table
