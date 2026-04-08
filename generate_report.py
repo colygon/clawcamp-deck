@@ -322,7 +322,31 @@ story.append(tier("OpenClaw"))
 story.append(body(
     "The dominant personal AI agent with ~160-280K GitHub stars. Deploys via WhatsApp, Telegram, "
     "Slack, Discord, and web interfaces. Multi-model support (Claude, GPT-4, Gemini, Llama, "
-    "Mistral). MCP tool integrations. The primary driver of all OpenClaw-native hosting demand."
+    "Mistral). The primary driver of all OpenClaw-native hosting demand."
+))
+story.append(body(
+    "<b>Governance and funding:</b> OpenClaw is maintained by the OpenClaw Foundation, which "
+    "received strategic funding from OpenAI in early 2026. Despite this corporate backing, the "
+    "project remains fully open source under its original license. The OpenAI investment was "
+    "structured to preserve the Foundation's independence and ensure OpenClaw remains "
+    "vendor-neutral across LLM providers. Technology leaders should note that this funding "
+    "relationship strengthens the project's long-term viability while introducing no "
+    "exclusivity constraints — OpenClaw continues to support Anthropic, Google, Meta, and "
+    "Mistral models alongside OpenAI."
+))
+story.append(body(
+    "<b>Skills as the primary extension model:</b> While MCP (Model Context Protocol) servers "
+    "have become the standard tool integration layer across the broader agent ecosystem, "
+    "OpenClaw has invested heavily in its own Skills framework as the primary mechanism for "
+    "extending agent capabilities. Skills are self-contained, portable packages of agent "
+    "behavior — combining prompts, tool definitions, and execution logic into shareable units. "
+    "This has created a secondary marketplace around agents: ClawHub (integrated into ClawHost), "
+    "IronClaw's curated marketplace (~600 skills), and Hermes Agent's agentskills.io standard "
+    "all represent competing skill distribution channels. OpenClaw also supports MCP servers, "
+    "but the community gravitates toward skills as the more opinionated and composable "
+    "abstraction. For hosting providers, skills marketplaces represent a differentiation vector "
+    "and a source of platform stickiness — ClawHost's integrated ClawHub and KlausAI's "
+    "pre-configured tool bundles are direct examples."
 ))
 
 story.append(tier("Hermes Agent"))
