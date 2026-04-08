@@ -716,7 +716,6 @@ story.append(make_table(
         ["Hostinger", "VPS", "No", "$4.99/mo", "Budget-friendly, global reach", "No GPU"],
         ["GTHost", "Dedicated + GPU", "Yes", "Custom", "AI/ML optimized", "No self-service"],
         ["Contabo", "VPS + Bare Metal + GPU", "Yes", "EUR 3.60", "Aggressive pricing, H200", "Basic managed services"],
-        ["Nebius", "NeoCloud (container-VM)", "Yes", "H100 $2.95/hr", "Cutting-edge B300, lowest H100", "Preview, ~5min deploy"],
     ],
     col_widths=w4,
 ))
@@ -828,7 +827,7 @@ story.append(hr())
 story.append(body(
     "This analysis was conducted in April 2026 and reflects a market in its earliest stages of "
     "formation. Several material limitations should be considered when applying these findings. "
-    "Many platforms covered in this report are in public preview (Nebius Serverless, Sprites.dev) "
+    "Many platforms covered in this report are in public preview (Sprites.dev) "
     "or have been generally available for fewer than six months. Pricing is subject to change, and "
     "few platforms have published case studies demonstrating enterprise-scale production deployments. "
     "The vendor landscape summary reflects publicly available information and vendor-provided data; "
@@ -846,9 +845,7 @@ story.append(body(
     "evaluate vendor financial stability alongside technical capabilities."
 ))
 story.append(body(
-    "The NeoCloud segment (represented here by Nebius Serverless) is nascent with few pure-play "
-    "vendors; expect additional entrants and rapid feature parity as GPU serverless becomes "
-    "commoditized. The security landscape for agent hosting is immature — few OpenClaw hosting "
+    "The security landscape for agent hosting is immature — few OpenClaw hosting "
     "platforms currently hold SOC 2, HIPAA, or GDPR certification, and the OpenClaw ecosystem's "
     "trust model for community-contributed skills remains a systemic risk that no hosting platform "
     "has fully addressed. Organizations in regulated industries should conduct independent audits "
