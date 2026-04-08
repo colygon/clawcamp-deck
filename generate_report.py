@@ -202,7 +202,7 @@ story.append(Paragraph(
 ))
 story.append(Spacer(1, 8))
 story.append(Paragraph(
-    "A comprehensive analysis of 30 platforms across 4 market segments",
+    "A comprehensive analysis of 31 platforms across 5 market segments",
     styles["CoverSub"],
 ))
 story.append(Spacer(1, 1.2 * inch))
@@ -778,6 +778,7 @@ story.append(make_table(
         ["Hostinger", "VPS", "No", "$4.99/mo", "Budget-friendly, global reach", "No GPU"],
         ["GTHost", "Dedicated + GPU", "Yes", "Custom", "AI/ML optimized", "No self-service"],
         ["Contabo", "VPS + Bare Metal + GPU", "Yes", "EUR 3.60", "Aggressive pricing, H200", "Basic managed services"],
+        ["Nebius Serverless", "NeoCloud (container-VM)", "Yes", "H100 $2.95/hr", "B300/H200 GPU, DevPods, per-second billing", "Public preview, ~5min deploy"],
     ],
     col_widths=w4,
 ))
@@ -889,7 +890,7 @@ story.append(hr())
 story.append(body(
     "This analysis was conducted in April 2026 and reflects a market in its earliest stages of "
     "formation. Several material limitations should be considered when applying these findings. "
-    "Many platforms covered in this report are in public preview (Sprites.dev) "
+    "Many platforms covered in this report are in public preview (Nebius Serverless, Sprites.dev) "
     "or have been generally available for fewer than six months. Pricing is subject to change, and "
     "few platforms have published case studies demonstrating enterprise-scale production deployments. "
     "The vendor landscape summary reflects publicly available information and vendor-provided data; "
@@ -907,12 +908,16 @@ story.append(body(
     "evaluate vendor financial stability alongside technical capabilities."
 ))
 story.append(body(
-    "The security landscape for agent hosting is immature — few OpenClaw hosting "
-    "platforms currently hold SOC 2, HIPAA, or GDPR certification, and the OpenClaw ecosystem's "
-    "trust model for community-contributed skills remains a systemic risk that no hosting platform "
-    "has fully addressed. Organizations in regulated industries should conduct independent audits "
-    "and not rely on vendor certification alone. Enterprises should conduct independent security "
-    "assessments and penetration testing as a condition of production deployment."
+    "The NeoCloud segment (represented here by Nebius Serverless) is nascent with few pure-play "
+    "vendors but represents an agent-ready serverless approach with DevPods, Jobs, and Endpoints "
+    "that support persistent container workloads with pay-as-you-go GPU pricing; expect additional "
+    "entrants as GPU serverless becomes commoditized. The security landscape for agent hosting is "
+    "immature — few OpenClaw hosting platforms currently hold SOC 2, HIPAA, or GDPR certification, "
+    "and the OpenClaw ecosystem's trust model for community-contributed skills remains a systemic "
+    "risk that no hosting platform has fully addressed. Organizations in regulated industries "
+    "should conduct independent audits and not rely on vendor certification alone. Enterprises "
+    "should conduct independent security assessments and penetration testing as a condition of "
+    "production deployment."
 ))
 
 story.append(Spacer(1, 1 * inch))
