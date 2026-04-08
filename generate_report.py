@@ -371,12 +371,25 @@ story.append(body(
     "Intentionally opinionated: trades generality for simplicity and auditability."
 ))
 
+story.append(tier("NemoClaw"))
+story.append(body(
+    "NVIDIA-backed enterprise variant of the OpenClaw runtime, built on NVIDIA's NIM (NVIDIA "
+    "Inference Microservices) and NeMo frameworks. Adds hardware-accelerated guardrails, "
+    "enterprise-grade credential isolation via OpenShell sandboxing, and native GPU inference "
+    "routing. Designed for organizations that need OpenClaw's agent capabilities with NVIDIA's "
+    "enterprise security and compliance guarantees. Available exclusively through ZenClaw AI's "
+    "managed hosting. Positions OpenClaw for regulated enterprise deployments that require "
+    "vendor-backed SLAs and hardware-level trust boundaries."
+))
+
 story.append(Spacer(1, 8))
 story.append(make_table(
     ["Project", "Language", "Stars", "Key Differentiator", "Hosting Impact"],
     [
         ["OpenClaw", "TypeScript", "~160-280K",
          "Dominant personal AI agent, multi-channel", "Primary hosting demand driver"],
+        ["NemoClaw", "Python/CUDA", "N/A (NVIDIA)",
+         "Enterprise OpenShell, GPU guardrails, NIM", "Drives ZenClaw managed hosting"],
         ["Hermes Agent", "Python", "~24.6K",
          "Self-improving skill loop, RL fine-tuning", "Emerging; cloud-hosted preferred"],
         ["IronClaw", "Rust", "~2.7K",
