@@ -44,6 +44,51 @@ const platforms = [
     ],
     bestFor: "Dev teams augmenting capacity with autonomous coding agents",
   },
+  {
+    name: "ZenClaw AI",
+    tagline: "Turnkey AI employee platform on NVIDIA NemoClaw with zero-config deployment in 9 seconds",
+    color: "border-rose-500/30",
+    badge: "bg-rose-500/15 text-rose-400",
+    audience: "SMBs wanting premium turnkey",
+    highlights: [
+      { label: "Code Required", value: "No" },
+      { label: "Setup", value: "~9 seconds" },
+      { label: "Models", value: "Claude, GPT-4, Gemini, Llama" },
+      { label: "Isolation", value: "NVIDIA NemoClaw OpenShell" },
+      { label: "Pricing", value: "$400/mo+" },
+    ],
+    bestFor: "SMBs wanting fully managed AI employees with NVIDIA-backed infrastructure",
+  },
+  {
+    name: "KlausAI",
+    tagline: "Managed OpenClaw hosting with 40+ SaaS integrations, pre-configured tools, and agent templates",
+    color: "border-rose-500/30",
+    badge: "bg-rose-500/15 text-rose-400",
+    audience: "Teams & businesses",
+    highlights: [
+      { label: "Code Required", value: "No" },
+      { label: "Integrations", value: "40+ (Salesforce, HubSpot, Slack)" },
+      { label: "Templates", value: "Exec Asst, Sales, Research" },
+      { label: "Monitoring", value: "Automated SRE" },
+      { label: "Pricing", value: "$19/mo+" },
+    ],
+    bestFor: "Teams wanting plug-and-play SaaS agent integrations at low entry cost",
+  },
+  {
+    name: "Coral",
+    tagline: "Security-first OpenClaw hosting with dedicated VMs, auto cost optimization, and 500+ integrations",
+    color: "border-rose-500/30",
+    badge: "bg-rose-500/15 text-rose-400",
+    audience: "Security-conscious orgs",
+    highlights: [
+      { label: "Code Required", value: "No" },
+      { label: "Isolation", value: "Dedicated VM per user" },
+      { label: "Integrations", value: "500+" },
+      { label: "Cost Savings", value: "Auto model routing (~10x)" },
+      { label: "Pricing", value: "$50/mo+" },
+    ],
+    bestFor: "Security-conscious teams needing strong isolation and automatic cost optimization",
+  },
 ];
 
 export function ManagedSection() {

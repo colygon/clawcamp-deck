@@ -16,7 +16,7 @@ const categories = [
   {
     label: "Managed Agent Platforms",
     anchor: "#managed",
-    count: 3,
+    count: 6,
     description: "End-to-end SaaS platforms for building and running agents",
     color: "text-rose-400",
   },
