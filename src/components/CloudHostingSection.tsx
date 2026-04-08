@@ -127,31 +127,6 @@ const vpsProviders = [
   },
 ];
 
-const openClawProviders = [
-  {
-    name: "ClawHost",
-    tagline: "Open-source one-click deployment platform purpose-built for OpenClaw AI agents on Hetzner VPS",
-    highlights: [
-      { label: "Type", value: "Managed VPS (via Hetzner)" },
-      { label: "GPU", value: "No" },
-      { label: "Agent Tooling", value: "Built-in (OpenClaw)" },
-      { label: "Open Source", value: "Yes (MIT)" },
-      { label: "Starting", value: "$25/mo" },
-    ],
-  },
-  {
-    name: "Claw Cloud",
-    tagline: "Developer cloud with VPS, VDS, and ClawCloud Run container platform with free tier and OpenClaw support",
-    highlights: [
-      { label: "Type", value: "VPS + Containers (Run)" },
-      { label: "GPU", value: "No" },
-      { label: "Free Tier", value: "Yes ($5 credit)" },
-      { label: "Regions", value: "Singapore + multi-AZ" },
-      { label: "Starting", value: "Free / $1.50/mo" },
-    ],
-  },
-];
-
 function PlatformCard({
   name,
   tagline,
@@ -213,12 +188,6 @@ export function CloudHostingSection() {
         ))}
       </div>
 
-      <h3 className="mb-4 mt-10 text-lg font-semibold text-emerald-400">OpenClaw-Specific Hosting</h3>
-      <div className="grid gap-4 md:grid-cols-2">
-        {openClawProviders.map((p) => (
-          <PlatformCard key={p.name} {...p} />
-        ))}
-      </div>
     </section>
   );
 }

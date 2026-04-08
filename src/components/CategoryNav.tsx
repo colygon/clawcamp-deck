@@ -2,7 +2,7 @@ const categories = [
   {
     label: "Code Execution Sandboxes",
     anchor: "#sandboxes",
-    count: 4,
+    count: 6,
     description: "Isolated environments for running AI-generated code safely",
     color: "text-indigo-400",
   },
@@ -16,14 +16,14 @@ const categories = [
   {
     label: "Managed Agent Platforms",
     anchor: "#managed",
-    count: 6,
+    count: 10,
     description: "End-to-end SaaS platforms for building and running agents",
     color: "text-rose-400",
   },
   {
     label: "Cloud Hosting & VPS",
     anchor: "#cloud",
-    count: 14,
+    count: 12,
     description: "General-purpose compute for self-hosted agent stacks",
     color: "text-emerald-400",
   },

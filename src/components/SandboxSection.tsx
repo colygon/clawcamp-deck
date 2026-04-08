@@ -63,6 +63,38 @@ const platforms = [
     ],
     bestFor: "Massive-scale code execution with GPU access for ML workloads",
   },
+  {
+    name: "Nebius Serverless",
+    tech: "Container-over-VM",
+    tagline: "GPU serverless with B300/H200 access, Jobs, Endpoints, and DevPods",
+    color: "border-sky-500/30",
+    badge: "bg-sky-500/15 text-sky-400",
+    highlights: [
+      { label: "Isolation", value: "Container-over-VM" },
+      { label: "Persistence", value: "Mounted volumes + S3" },
+      { label: "Cold Start", value: "~5 min (deploy); improving" },
+      { label: "GPU", value: "Yes (B300, B200, H200, H100)" },
+      { label: "Interface", value: "Console / CLI / Docker" },
+      { label: "Pricing", value: "Per-second; H100 $2.95/hr" },
+    ],
+    bestFor: "GPU-heavy AI training, fine-tuning, and inference with cutting-edge NVIDIA hardware",
+  },
+  {
+    name: "AgentComputer.ai",
+    tech: "Persistent VMs",
+    tagline: "Sub-second cloud VMs for Claude, Codex, and CUA agents with persistent storage",
+    color: "border-orange-500/30",
+    badge: "bg-orange-500/15 text-orange-400",
+    highlights: [
+      { label: "Isolation", value: "Ubuntu 24.04 VMs" },
+      { label: "Persistence", value: "25 GB persistent disk" },
+      { label: "Cold Start", value: "Sub-second" },
+      { label: "GPU", value: "No" },
+      { label: "Interface", value: "Agent CLI / SSH" },
+      { label: "Pricing", value: "$20/mo (25 machines)" },
+    ],
+    bestFor: "Remote AI coding agent workflows with persistent, always-available sandboxes",
+  },
 ];
 
 export function SandboxSection() {
