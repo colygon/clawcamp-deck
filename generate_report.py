@@ -177,9 +177,9 @@ def first_page(canvas, doc):
     canvas.setFillColor(NAVY)
     canvas.rect(0, 0, letter[0], letter[1], fill=1, stroke=0)
 
-    # Accent bar
+    # Accent bar — positioned below the subtitle area
     canvas.setFillColor(ACCENT)
-    canvas.rect(72, letter[1] - 280, letter[0] - 144, 3, fill=1, stroke=0)
+    canvas.rect(72, 220, letter[0] - 144, 3, fill=1, stroke=0)
 
     canvas.restoreState()
 
