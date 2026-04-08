@@ -5,6 +5,7 @@ import {
   OrchestrationSection,
   ManagedSection,
   CloudHostingSection,
+  GpuComputeSection,
   MasterTable,
   Sources,
   Footer,
@@ -19,6 +20,7 @@ export default function Home() {
       <OrchestrationSection />
       <ManagedSection />
       <CloudHostingSection />
+      <GpuComputeSection />
       <MasterTable />
       <Sources />
       <Footer />

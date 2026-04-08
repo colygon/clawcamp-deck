@@ -44,7 +44,7 @@ const rows = [
     pricing: "$30/mo credits; per-sec",
   },
   {
-    category: "Sandbox",
+    category: "GPU",
     name: "Nebius Serverless",
     isolation: "Container-over-VM",
     persistence: "Mounted volumes + S3",
@@ -348,6 +348,7 @@ const categoryColors: Record<string, string> = {
   Managed: "text-rose-400",
   Cloud: "text-emerald-400",
   VPS: "text-emerald-400",
+  GPU: "text-yellow-400",
 };
 
 export function MasterTable() {

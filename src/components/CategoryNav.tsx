@@ -2,7 +2,7 @@ const categories = [
   {
     label: "Code Execution Sandboxes",
     anchor: "#sandboxes",
-    count: 6,
+    count: 5,
     description: "Isolated environments for running AI-generated code safely",
     color: "text-indigo-400",
   },
@@ -27,12 +27,19 @@ const categories = [
     description: "General-purpose compute for self-hosted agent stacks",
     color: "text-emerald-400",
   },
+  {
+    label: "GPU Compute / NeoCloud",
+    anchor: "#gpu-compute",
+    count: 1,
+    description: "Serverless GPU infrastructure for AI training and inference",
+    color: "text-yellow-400",
+  },
 ];
 
 export function CategoryNav() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-12">
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
         {categories.map((c) => (
           <a
             key={c.anchor}

@@ -4,6 +4,7 @@ export { SandboxSection } from "./SandboxSection";
 export { OrchestrationSection } from "./OrchestrationSection";
 export { ManagedSection } from "./ManagedSection";
 export { CloudHostingSection } from "./CloudHostingSection";
+export { GpuComputeSection } from "./GpuComputeSection";
 export { MasterTable } from "./MasterTable";
 export { Sources } from "./Sources";
 export { Footer } from "./Footer";

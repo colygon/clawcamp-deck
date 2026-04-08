@@ -29,6 +29,9 @@ export function Hero() {
           <a href="#cloud" className="rounded-full border border-card-border px-6 py-2.5 text-sm font-semibold text-foreground transition hover:border-accent">
             Cloud &amp; VPS
           </a>
+          <a href="#gpu-compute" className="rounded-full border border-card-border px-6 py-2.5 text-sm font-semibold text-foreground transition hover:border-accent">
+            GPU Compute
+          </a>
           <a href="#master-table" className="rounded-full border border-card-border px-6 py-2.5 text-sm font-semibold text-foreground transition hover:border-accent">
             Full Table
           </a>
