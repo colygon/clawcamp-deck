@@ -778,7 +778,7 @@ story.append(make_table(
         ["Hostinger", "VPS", "No", "$4.99/mo", "Budget-friendly, global reach", "No GPU"],
         ["GTHost", "Dedicated + GPU", "Yes", "Custom", "AI/ML optimized", "No self-service"],
         ["Contabo", "VPS + Bare Metal + GPU", "Yes", "EUR 3.60", "Aggressive pricing, H200", "Basic managed services"],
-        ["Nebius Serverless", "NeoCloud (container-VM)", "Yes", "H100 $2.95/hr", "B300/H200 GPU, DevPods, per-second billing", "Public preview, ~5min deploy"],
+        ["Nebius Serverless", "NeoCloud (container-VM)", "Yes", "From $0.07/hr", "B300/H200 GPU, DevPods, per-second billing", "Public preview, ~5min deploy"],
     ],
     col_widths=w4,
 ))

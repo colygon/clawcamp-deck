@@ -52,7 +52,7 @@ const rows = [
     coldStart: "~5 min deploy",
     openSource: "No",
     selfHosted: "No",
-    pricing: "Per-sec; H100 $2.95/hr",
+    pricing: "Per-sec; from $0.07/hr",
   },
   {
     category: "Sandbox",

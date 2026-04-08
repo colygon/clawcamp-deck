@@ -9,7 +9,7 @@ const platforms = [
       { label: "Cold Start", value: "~5 min deploy; improving" },
       { label: "Max Runtime", value: "168h (Jobs)" },
       { label: "Interface", value: "Console / CLI / Docker" },
-      { label: "Pricing", value: "Per-second; H100 $2.95/hr" },
+      { label: "Pricing", value: "Per-second; from $0.07/hr" },
     ],
     bestFor: "GPU-heavy AI training, fine-tuning, and inference with cutting-edge NVIDIA hardware",
   },
