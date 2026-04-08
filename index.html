@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClawCamp x NVIDIA — Sponsorship Deck</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0d0d0d;
+      --bg-card: #1a1a1a;
+      --orange: #e8913a;
+      --orange-light: #f0a755;
+      --green: #76b947;
+      --white: #f5f5f5;
+      --gray: #a0a0a0;
+      --nvidia-green: #76b900;
+    }
+
+    html {
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    .slide {
+      min-height: 100vh;
+      scroll-snap-align: start;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide-inner {
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    /* ── Nav dots ── */
+    .nav-dots {
+      position: fixed;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      z-index: 100;
+    }
+    .nav-dots a {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      display: block;
+      transition: all 0.3s;
+    }
+    .nav-dots a:hover,
+    .nav-dots a.active {
+      background: var(--orange);
+      transform: scale(1.4);
+    }
+
+    /* ── Slide 1: Title ── */
+    .slide-title {
+      text-align: center;
+      background: radial-gradient(ellipse at 50% 80%, #1f1510 0%, var(--bg) 70%);
+    }
+    .slide-title .tagline-top {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 20px;
+    }
+    .logo-text {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 80px;
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 8px;
+      text-shadow: 0 0 60px rgba(232,145,58,0.3);
+    }
+    .logo-text .dot-us {
+      font-size: 48px;
+      color: var(--orange-light);
+    }
+    .slide-title .subtitle {
+      font-size: 18px;
+      color: var(--gray);
+      max-width: 600px;
+      margin: 16px auto 40px;
+      line-height: 1.7;
+    }
+    .claw-marks {
+      font-size: 40px;
+      opacity: 0.5;
+      margin-bottom: 24px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 8px 24px;
+      border: 1px solid var(--orange);
+      border-radius: 100px;
+      font-size: 13px;
+      color: var(--orange);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* ── Slide 2: About ── */
+    .slide-about {
+      background: linear-gradient(135deg, #0d0d0d 0%, #141008 100%);
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .section-label {
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 12px;
+    }
+    h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 38px;
+      font-weight: 700;
+      color: var(--orange);
+      line-height: 1.2;
+      margin-bottom: 24px;
+    }
+    .body-text {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--gray);
+    }
+    .skill-levels {
+      margin-top: 28px;
+      font-size: 15px;
+      color: var(--orange-light);
+      font-weight: 600;
+    }
+    .activity-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .activity-list li {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--orange-light);
+    }
+    .activity-list li .icon {
+      font-size: 22px;
+      width: 32px;
+      text-align: center;
+    }
+
+    /* ── Market slides ── */
+    .slide-market { background: linear-gradient(135deg, #0d0d0d 0%, #0d0e14 100%); }
+    .slide-ecosystem { background: linear-gradient(135deg, #0d0d0d 0%, #14100d 100%); }
+    .slide-tam { background: linear-gradient(135deg, #0d0d0d 0%, #0d1410 100%); }
+    .slide-saas { background: linear-gradient(135deg, #0d0d0d 0%, #140d0d 100%); }
+
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-top: 32px;
+    }
+    .market-cat {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .market-cat .cat-count {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+    }
+    .market-cat .cat-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gray);
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .market-cat .cat-names {
+      font-size: 11px;
+      color: rgba(255,255,255,0.35);
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+    .color-indigo { color: #818cf8; }
+    .color-cyan { color: #22d3ee; }
+    .color-rose { color: #fb7185; }
+    .color-emerald { color: #34d399; }
+    .color-yellow { color: #fbbf24; }
+
+    .eco-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+    .eco-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 22px 18px;
+    }
+    .eco-card h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .eco-card .eco-lang {
+      font-size: 11px;
+      color: var(--gray);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .eco-card .eco-desc {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+    .eco-card .eco-stat {
+      font-size: 12px;
+      color: var(--orange-light);
+      font-weight: 600;
+      margin-top: 10px;
+    }
+    .eco-card.eco-primary {
+      border-color: rgba(232,145,58,0.3);
+      background: rgba(232,145,58,0.04);
+    }
+
+    .tam-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 32px;
+    }
+    .tam-box {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 28px;
+    }
+    .tam-box h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .tam-box .tam-size {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--orange);
+      margin-bottom: 12px;
+    }
+    .tam-box p {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+    .tam-box ul { list-style: none; margin-top: 12px; }
+    .tam-box ul li {
+      font-size: 13px;
+      color: var(--gray);
+      padding: 4px 0;
+    }
+    .tam-box ul li::before {
+      content: '>';
+      color: var(--orange);
+      font-weight: 700;
+      margin-right: 8px;
+    }
+
+    .saas-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 32px;
+    }
+    .saas-stat {
+      text-align: center;
+      padding: 28px 16px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+    }
+    .saas-stat .stat-val {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 36px;
+      font-weight: 800;
+      color: #ef4444;
+    }
+    .saas-stat .stat-label {
+      font-size: 13px;
+      color: var(--gray);
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+    .saas-mechanism {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+    .saas-mech-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 22px 18px;
+    }
+    .saas-mech-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--orange-light);
+    }
+    .saas-mech-card p {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .market-grid { grid-template-columns: repeat(2, 1fr); }
+      .eco-grid { grid-template-columns: 1fr; }
+      .tam-cols { grid-template-columns: 1fr; }
+      .saas-stats { grid-template-columns: 1fr; }
+      .saas-mechanism { grid-template-columns: 1fr; }
+    }
+
+    /* ── Slide 3: NVIDIA ── */
+    .slide-nvidia {
+      background:
+        linear-gradient(135deg, rgba(13,13,13,0.95) 0%, rgba(10,20,5,0.92) 100%),
+        radial-gradient(ellipse at 70% 30%, rgba(118,185,0,0.12) 0%, transparent 60%);
+      position: relative;
+    }
+    .slide-nvidia::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(118,185,0,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .nvidia-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 12px;
+    }
+    .nvidia-logo-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(118,185,0,0.1);
+      border: 1px solid rgba(118,185,0,0.25);
+      border-radius: 8px;
+      padding: 8px 18px;
+    }
+    .nvidia-logo-badge svg {
+      height: 22px;
+      fill: var(--nvidia-green);
+    }
+    .nvidia-x {
+      font-size: 14px;
+      color: var(--gray);
+      font-weight: 500;
+    }
+    .clawcamp-mini {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--orange);
+    }
+    .slide-nvidia h2 {
+      font-size: 36px;
+      color: var(--nvidia-green);
+      margin-bottom: 8px;
+    }
+    .nvidia-subtitle {
+      font-size: 17px;
+      color: var(--gray);
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    .nvidia-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+    .nvidia-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 30px;
+      transition: border-color 0.3s;
+    }
+    .nvidia-card:hover {
+      border-color: rgba(118,185,0,0.3);
+    }
+    .nvidia-card.featured {
+      border-color: rgba(118,185,0,0.25);
+      background: rgba(118,185,0,0.04);
+    }
+    .nvidia-card .card-icon {
+      font-size: 28px;
+      margin-bottom: 14px;
+    }
+    .nvidia-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .nvidia-card p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--gray);
+    }
+    .nvidia-card .highlight {
+      color: var(--nvidia-green);
+      font-weight: 600;
+    }
+    .nvidia-card ul {
+      list-style: none;
+      margin-top: 12px;
+    }
+    .nvidia-card ul li {
+      font-size: 14px;
+      color: var(--gray);
+      padding: 4px 0;
+    }
+    .nvidia-card ul li::before {
+      content: '>';
+      color: var(--nvidia-green);
+      font-weight: 700;
+      margin-right: 10px;
+    }
+
+    .dgx-spec-bar {
+      display: flex;
+      gap: 24px;
+      margin-top: 32px;
+      padding: 20px 28px;
+      background: rgba(118,185,0,0.06);
+      border: 1px solid rgba(118,185,0,0.15);
+      border-radius: 12px;
+    }
+    .dgx-spec {
+      text-align: center;
+      flex: 1;
+    }
+    .dgx-spec .val {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--nvidia-green);
+    }
+    .dgx-spec .label {
+      font-size: 11px;
+      color: var(--gray);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 4px;
+    }
+
+    /* ── Slide 4: Sponsorship Tiers ── */
+    .slide-sponsor {
+      background: linear-gradient(160deg, #0d0d0d 0%, #140e08 100%);
+    }
+    .slide-sponsor h2 {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .tier-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 36px 28px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .tier-card:hover {
+      border-color: rgba(232,145,58,0.3);
+      transform: translateY(-4px);
+    }
+    .tier-card.featured-tier {
+      border-color: var(--orange);
+    }
+    .tier-card.featured-tier::before {
+      content: 'RECOMMENDED';
+      position: absolute;
+      top: 14px;
+      right: -30px;
+      background: var(--orange);
+      color: #000;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 4px 36px;
+      transform: rotate(45deg);
+      letter-spacing: 1px;
+    }
+    .tier-card .tier-icon {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+    .tier-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .tier-card .price {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--orange);
+      margin-bottom: 20px;
+    }
+    .tier-card ul {
+      list-style: none;
+      text-align: left;
+    }
+    .tier-card ul li {
+      font-size: 14px;
+      color: var(--gray);
+      padding: 7px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tier-card ul li .check {
+      color: var(--orange);
+      font-weight: 700;
+    }
+
+    /* ── Slide 5: Benefits ── */
+    .slide-benefits {
+      background: linear-gradient(135deg, #0d0d0d 0%, #0d1210 100%);
+    }
+    .slide-benefits h2 {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .benefit-item {
+      display: flex;
+      gap: 16px;
+      padding: 24px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .benefit-item .b-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+    .benefit-item h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .benefit-item p {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    /* ── Slide 6: Sponsors ── */
+    .slide-sponsors {
+      background: radial-gradient(ellipse at 50% 50%, #1a1510 0%, var(--bg) 70%);
+      text-align: center;
+    }
+    .slide-sponsors h2 {
+      margin-bottom: 48px;
+    }
+    .sponsor-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .sponsor-logo {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--gray);
+      min-height: 80px;
+      transition: border-color 0.3s;
+    }
+    .sponsor-logo:hover {
+      border-color: rgba(232,145,58,0.3);
+    }
+
+    /* ── Slide 7: CTA ── */
+    .slide-cta {
+      text-align: center;
+      background: radial-gradient(ellipse at 50% 60%, #1f1510 0%, var(--bg) 70%);
+    }
+    .slide-cta h2 {
+      font-size: 44px;
+      margin-bottom: 20px;
+    }
+    .slide-cta .cta-sub {
+      font-size: 18px;
+      color: var(--gray);
+      margin-bottom: 40px;
+      max-width: 550px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 16px 48px;
+      background: var(--orange);
+      color: #000;
+      font-weight: 700;
+      font-size: 16px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: all 0.3s;
+      letter-spacing: 0.5px;
+    }
+    .cta-btn:hover {
+      background: var(--orange-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(232,145,58,0.3);
+    }
+    .contact-info {
+      margin-top: 40px;
+      font-size: 14px;
+      color: var(--gray);
+    }
+    .contact-info a {
+      color: var(--orange);
+      text-decoration: none;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .slide { padding: 40px 24px; }
+      .logo-text { font-size: 48px; }
+      .two-col { grid-template-columns: 1fr; gap: 32px; }
+      .nvidia-grid { grid-template-columns: 1fr; }
+      .tier-grid { grid-template-columns: 1fr; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .sponsor-grid { grid-template-columns: repeat(2, 1fr); }
+      h2 { font-size: 28px; }
+      .nav-dots { display: none; }
+      .dgx-spec-bar { flex-wrap: wrap; gap: 16px; }
+      .dgx-spec { min-width: 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav Dots -->
+  <nav class="nav-dots">
+    <a href="#slide-1"></a>
+    <a href="#slide-2"></a>
+    <a href="#slide-market"></a>
+    <a href="#slide-ecosystem"></a>
+    <a href="#slide-tam"></a>
+    <a href="#slide-saas"></a>
+    <a href="#slide-3"></a>
+    <a href="#slide-4"></a>
+    <a href="#slide-5"></a>
+    <a href="#slide-6"></a>
+    <a href="#slide-7"></a>
+  </nav>
+
+  <!-- ============ SLIDE 1: TITLE ============ -->
+  <section class="slide slide-title" id="slide-1">
+    <div class="slide-inner">
+      <p class="tagline-top">The OpenClaw Movement Is Not Just an Evolution &mdash; It's a Revolution</p>
+      <div class="claw-marks">///</div>
+      <div class="logo-text">ClawCamp<span class="dot-us">.us</span></div>
+      <p class="subtitle">A Community of Enthusiasts Supporting Personal Agent Adoption and Increasing AI Agent Superpowers</p>
+      <div class="badge">NVIDIA Partnership Proposal</div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 2: ABOUT ============ -->
+  <section class="slide slide-about" id="slide-2">
+    <div class="slide-inner">
+      <div class="two-col">
+        <div>
+          <p class="section-label">About ClawCamp</p>
+          <h2>Up-Level Your Personal Agent Superpowers</h2>
+          <p class="body-text">
+            ClawCamp is a community advancing individual and collective personal agent proficiency and mastery. We bring together entrepreneurs, developers, business leaders, and anyone hungry to explore AI agents and their ability to increase personal and team productivity. We host Summits, Workshops, Buildathons, Meetups, Demo Events, and Unconferences &mdash; starting in the SF Bay Area, with plans to expand regionally and globally.
+          </p>
+          <p class="skill-levels">Beginner &bull; Intermediate &bull; Advanced Programming</p>
+        </div>
+        <div>
+          <ul class="activity-list">
+            <li><span class="icon">&#127942;</span> Events</li>
+            <li><span class="icon">&#128736;</span> Workshops</li>
+            <li><span class="icon">&#129504;</span> Hackathons</li>
+            <li><span class="icon">&#127758;</span> Conferences</li>
+            <li><span class="icon">&#128640;</span> Demo Days</li>
+            <li><span class="icon">&#128218;</span> Mentors</li>
+            <li><span class="icon">&#129309;</span> Community</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE: MARKET LANDSCAPE ============ -->
+  <section class="slide slide-market" id="slide-market">
+    <div class="slide-inner">
+      <p class="section-label">Market Intelligence</p>
+      <h2>Agent Hosting: 30 Platforms Across 4 Segments</h2>
+      <p class="body-text">The OpenClaw hosting ecosystem emerged in late 2025 and has grown to over 30 vendors. Our research identifies five distinct market segments with fundamentally different trade-offs in cost, security, and control.</p>
+      <div class="market-grid">
+        <div class="market-cat">
+          <div class="cat-count color-indigo">5</div>
+          <div class="cat-label">Sandboxes</div>
+          <div class="cat-names">Daytona, E2B, Sprites.dev, Modal, AgentComputer.ai</div>
+        </div>
+        <div class="market-cat">
+          <div class="cat-count color-cyan">3</div>
+          <div class="cat-label">Orchestration</div>
+          <div class="cat-names">LangGraph Cloud, Temporal.io, Kagent</div>
+        </div>
+        <div class="market-cat">
+          <div class="cat-count color-rose">10</div>
+          <div class="cat-label">Managed Agents</div>
+          <div class="cat-names">ZenClaw, KlausAI, Coral, ClawHost, Claw Cloud, Zo Computer, Lindy, Relevance AI, Devin, Dialog</div>
+        </div>
+        <div class="market-cat">
+          <div class="cat-count color-emerald">12</div>
+          <div class="cat-label">Cloud &amp; VPS</div>
+          <div class="cat-names">AWS, DigitalOcean, Fly.io, Render, Railway, Heroku, Hetzner, OVH, Hostinger, GTHost, Contabo</div>
+        </div>
+        <div class="market-cat">
+          <div class="cat-count color-yellow">1</div>
+          <div class="cat-label">NeoCloud</div>
+          <div class="cat-names">Nebius Serverless (B300, H200, H100)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE: OPENCLAW ECOSYSTEM ============ -->
+  <section class="slide slide-ecosystem" id="slide-ecosystem">
+    <div class="slide-inner">
+      <p class="section-label">OpenClaw Ecosystem</p>
+      <h2>The Personal Agent Landscape</h2>
+      <p class="body-text">OpenClaw is maintained by the OpenClaw Foundation, which received strategic funding from OpenAI while remaining fully open source and vendor-neutral. The ecosystem has spawned 6+ derivatives, each targeting different deployment needs. OpenClaw's Skills framework &mdash; not MCP servers &mdash; is the primary extension model, creating secondary marketplaces (ClawHub, IronClaw's 600 skills, agentskills.io).</p>
+      <div class="eco-grid">
+        <div class="eco-card eco-primary">
+          <h4>OpenClaw</h4>
+          <div class="eco-lang">TypeScript</div>
+          <div class="eco-desc">The dominant personal AI agent. WhatsApp, Telegram, Slack, Discord. Multi-model (Claude, GPT-4, Gemini, Llama). Skills marketplace via ClawHub.</div>
+          <div class="eco-stat">~160-280K GitHub stars</div>
+        </div>
+        <div class="eco-card">
+          <h4>NemoClaw</h4>
+          <div class="eco-lang">Python / CUDA</div>
+          <div class="eco-desc">NVIDIA-backed enterprise variant. OpenShell sandboxing, GPU guardrails, NIM integration. Available via ZenClaw AI.</div>
+          <div class="eco-stat">NVIDIA Enterprise</div>
+        </div>
+        <div class="eco-card">
+          <h4>Hermes Agent</h4>
+          <div class="eco-lang">Python</div>
+          <div class="eco-desc">Self-improving skill loop from Nous Research. Completed tasks become searchable Skill Documents. Native RL fine-tuning.</div>
+          <div class="eco-stat">~24.6K stars (Feb 2026)</div>
+        </div>
+        <div class="eco-card">
+          <h4>IronClaw</h4>
+          <div class="eco-lang">Rust</div>
+          <div class="eco-desc">Security-first agent by NEAR AI. 5-layer defense-in-depth: TLS 1.3, endpoint allowlist, AES-256-GCM credentials, WASM sandbox, Docker isolation.</div>
+          <div class="eco-stat">~2.7K stars &bull; 3.4MB binary</div>
+        </div>
+        <div class="eco-card">
+          <h4>ZeroClaw</h4>
+          <div class="eco-lang">Rust</div>
+          <div class="eco-desc">Edge-first alternative. 3.4-5MB static binary, &lt;50ms startup, ~5-6MB RAM. 22+ LLM providers, agent swarms. Apache 2.0.</div>
+          <div class="eco-stat">20K+ stars &bull; 1,800+ tests</div>
+        </div>
+        <div class="eco-card">
+          <h4>NanoClaw</h4>
+          <div class="eco-lang">TypeScript</div>
+          <div class="eco-desc">~500 lines of core code across 15 files. Container isolation per conversation. First personal AI with Agent Swarms.</div>
+          <div class="eco-stat">Auditable in ~8 minutes</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE: TAM ============ -->
+  <section class="slide slide-tam" id="slide-tam">
+    <div class="slide-inner">
+      <p class="section-label">Total Addressable Market</p>
+      <h2>Two Non-Overlapping Markets</h2>
+      <p class="body-text">The agent hosting TAM splits into framework-agnostic infrastructure (serving all frameworks) and OpenClaw-native platforms (serving only the OpenClaw community). ClawCamp sits at the intersection &mdash; our community spans both.</p>
+      <div class="tam-cols">
+        <div class="tam-box">
+          <h3 style="color: #818cf8;">Framework-Agnostic Infrastructure</h3>
+          <div class="tam-size">500K&ndash;1M devs</div>
+          <p>Sandbox, orchestration, and cloud providers serving all agent frameworks.</p>
+          <ul>
+            <li>LangChain/LangGraph &mdash; 34.5M monthly downloads</li>
+            <li>CrewAI &mdash; 44.3K stars, 5.2M downloads</li>
+            <li>OpenAI Agents SDK &mdash; 19K stars, 10.3M downloads</li>
+            <li>Claude Agent SDK &mdash; new, multi-cloud</li>
+            <li>AutoGen &mdash; 54.6K stars (now Microsoft)</li>
+            <li>Google ADK &mdash; 17.8K stars, native A2A</li>
+          </ul>
+        </div>
+        <div class="tam-box" style="border-color: rgba(232,145,58,0.3); background: rgba(232,145,58,0.03);">
+          <h3 style="color: var(--orange);">OpenClaw-Native Managed Platforms</h3>
+          <div class="tam-size">160&ndash;280K community</div>
+          <p>Purpose-built hosting for OpenClaw users. Smaller but higher-margin, less competition from general infra providers.</p>
+          <ul>
+            <li>ZenClaw AI &mdash; $400/mo, NVIDIA NemoClaw</li>
+            <li>KlausAI &mdash; $19/mo, 40+ SaaS integrations</li>
+            <li>Coral &mdash; $50/mo, dedicated VM, ~10x cost routing</li>
+            <li>ClawHost &mdash; $25/mo, open-source MIT</li>
+            <li>Claw Cloud &mdash; free tier, container platform</li>
+            <li>Zo Computer &mdash; free/$18, personal AI cloud</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE: SAASPOCALYPSE ============ -->
+  <section class="slide slide-saas" id="slide-saas">
+    <div class="slide-inner">
+      <p class="section-label">Market Context</p>
+      <h2>OpenClaw &amp; the SaaSpocalypse</h2>
+      <p class="body-text">OpenClaw is the primary technical reference when analysts explain the structural threat to per-seat SaaS. One agent replaces dozens of human "seats," breaking the economics of charging per user per app.</p>
+      <div class="saas-stats">
+        <div class="saas-stat">
+          <div class="stat-val">$2T</div>
+          <div class="stat-label">Software &amp; Services valuation drawdown attributed to agent disruption</div>
+        </div>
+        <div class="saas-stat">
+          <div class="stat-val">90-99%</div>
+          <div class="stat-label">Seat-based revenue compression when 1 agent replaces 50 users</div>
+        </div>
+        <div class="saas-stat">
+          <div class="stat-val">5-10x</div>
+          <div class="stat-label">Cost reduction via automatic model routing (cheap models for simple tasks)</div>
+        </div>
+      </div>
+      <div class="saas-mechanism">
+        <div class="saas-mech-card">
+          <h4>What Gets Disrupted</h4>
+          <p>Commodity SaaS whose value is UI and light workflow. Email-productivity overlays, simple dashboards, and thin point solutions get compressed as agents stitch data across tools directly.</p>
+        </div>
+        <div class="saas-mech-card">
+          <h4>What Survives</h4>
+          <p>Systems of record with data and compliance moats &mdash; core CRM, email providers, cloud infrastructure. Agents depend on them as backends. Plus: agent-native platforms and orchestration layers become new power centers.</p>
+        </div>
+        <div class="saas-mech-card">
+          <h4>The Hosting Tailwind</h4>
+          <p>As organizations replace per-seat SaaS spending with agent infrastructure, hosting platforms capture a share of the reallocated budget. This is the market ClawCamp's community is building.</p>
+        </div>
+        <div class="saas-mech-card">
+          <h4>Security Is the Buying Criterion</h4>
+          <p>ClawJacked (CVE-2026-25253) exposed credential isolation weaknesses. Enterprises now require dedicated VM or microVM isolation. OpenClaw's default plaintext credential storage is unacceptable for production.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 3: NVIDIA PARTNERSHIP ============ -->
+  <section class="slide slide-nvidia" id="slide-3">
+    <div class="slide-inner">
+      <div class="nvidia-header">
+        <div class="nvidia-logo-badge">
+          <svg viewBox="0 0 351 70" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h50v70H0z" fill="none"/>
+            <text x="0" y="50" font-family="Space Grotesk, sans-serif" font-size="48" font-weight="900" fill="#76b900">NVIDIA</text>
+          </svg>
+        </div>
+        <span class="nvidia-x">&times;</span>
+        <span class="clawcamp-mini">ClawCamp</span>
+      </div>
+
+      <h2>DGX Spark Workshop &amp; On-Site Experience</h2>
+      <p class="nvidia-subtitle">
+        Bring the power of NVIDIA DGX Spark directly to ClawCamp attendees. Host a hands-on workshop and offer on-site purchasing &mdash; connecting your personal AI supercomputer with the people building the agent future.
+      </p>
+
+      <div class="nvidia-grid">
+        <div class="nvidia-card featured">
+          <div class="card-icon">&#127891;</div>
+          <h3>Hands-On Workshop</h3>
+          <p>Lead a <span class="highlight">dedicated workshop session</span> where attendees build and deploy AI agents directly on DGX Spark hardware.</p>
+          <ul>
+            <li>60-90 minute guided session</li>
+            <li>Live agent development on DGX Spark</li>
+            <li>Run up to 200B parameter models locally</li>
+            <li>NVIDIA engineer-led instruction</li>
+          </ul>
+        </div>
+
+        <div class="nvidia-card featured">
+          <div class="card-icon">&#128187;</div>
+          <h3>On-Site DGX Spark Sales</h3>
+          <p>Set up a <span class="highlight">premium demo &amp; sales station</span> at the event for attendees to experience and purchase the DGX Spark.</p>
+          <ul>
+            <li>Dedicated demo area with live units</li>
+            <li>On-site purchase &amp; order processing</li>
+            <li>Exclusive ClawCamp attendee pricing</li>
+            <li>Direct-to-attendee engagement</li>
+          </ul>
+        </div>
+
+        <div class="nvidia-card">
+          <div class="card-icon">&#127775;</div>
+          <h3>Brand Presence</h3>
+          <p>Full <span class="highlight">NVIDIA branding</span> throughout the event as a headline workshop partner.</p>
+          <ul>
+            <li>Logo on all event materials &amp; signage</li>
+            <li>Featured in email &amp; social promotion</li>
+            <li>Stage time for product announcements</li>
+            <li>Co-branded event content</li>
+          </ul>
+        </div>
+
+        <div class="nvidia-card">
+          <div class="card-icon">&#128101;</div>
+          <h3>Audience Fit</h3>
+          <p>ClawCamp attracts exactly the <span class="highlight">early adopters &amp; power users</span> who want personal AI infrastructure.</p>
+          <ul>
+            <li>AI developers &amp; entrepreneurs</li>
+            <li>Business leaders exploring agents</li>
+            <li>Technical community ready to buy</li>
+            <li>SF Bay Area tech ecosystem</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="dgx-spec-bar">
+        <div class="dgx-spec">
+          <div class="val">1 PFLOP</div>
+          <div class="label">AI Performance</div>
+        </div>
+        <div class="dgx-spec">
+          <div class="val">128 GB</div>
+          <div class="label">Unified Memory</div>
+        </div>
+        <div class="dgx-spec">
+          <div class="val">200B</div>
+          <div class="label">Max Parameters</div>
+        </div>
+        <div class="dgx-spec">
+          <div class="val">Grace Blackwell</div>
+          <div class="label">GB10 Superchip</div>
+        </div>
+        <div class="dgx-spec">
+          <div class="val">1.2 kg</div>
+          <div class="label">Desktop Form</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 4: SPONSORSHIP TIERS ============ -->
+  <section class="slide slide-sponsor" id="slide-4">
+    <div class="slide-inner">
+      <h2>Sponsorship Opportunities</h2>
+      <div class="tier-grid">
+        <div class="tier-card">
+          <div class="tier-icon">&#127942;</div>
+          <h3>Title Sponsor</h3>
+          <div class="price">$5,000</div>
+          <ul>
+            <li><span class="check">+</span> Headline branding on all materials</li>
+            <li><span class="check">+</span> Keynote or workshop slot</li>
+            <li><span class="check">+</span> Premium demo table</li>
+            <li><span class="check">+</span> Logo on event signage &amp; stage</li>
+            <li><span class="check">+</span> Social media &amp; email features</li>
+            <li><span class="check">+</span> 5 complimentary tickets</li>
+            <li><span class="check">+</span> On-site sales opportunity</li>
+          </ul>
+        </div>
+        <div class="tier-card featured-tier">
+          <div class="tier-icon">&#11088;</div>
+          <h3>Standard Sponsor</h3>
+          <div class="price">$2,500</div>
+          <ul>
+            <li><span class="check">+</span> Logo on event materials</li>
+            <li><span class="check">+</span> Demo table included</li>
+            <li><span class="check">+</span> Lightning talk slot (10 min)</li>
+            <li><span class="check">+</span> Social media mention</li>
+            <li><span class="check">+</span> 3 complimentary tickets</li>
+            <li><span class="check">+</span> Newsletter feature</li>
+          </ul>
+        </div>
+        <div class="tier-card">
+          <div class="tier-icon">&#128421;</div>
+          <h3>Demo Table</h3>
+          <div class="price">$1,000</div>
+          <ul>
+            <li><span class="check">+</span> 6ft demo table at event</li>
+            <li><span class="check">+</span> Logo on sponsor page</li>
+            <li><span class="check">+</span> Direct attendee engagement</li>
+            <li><span class="check">+</span> 2 complimentary tickets</li>
+            <li><span class="check">+</span> Post-event attendee list</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 5: BENEFITS ============ -->
+  <section class="slide slide-benefits" id="slide-5">
+    <div class="slide-inner">
+      <h2>Sponsorship Benefits</h2>
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <div class="b-icon">&#127908;</div>
+          <div>
+            <h4>Speaking &amp; Workshop Access</h4>
+            <p>Lead workshops, give talks, or host demo sessions in front of an engaged audience of AI builders and enthusiasts.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="b-icon">&#128200;</div>
+          <div>
+            <h4>Direct Lead Generation</h4>
+            <p>Connect directly with developers, entrepreneurs, and business leaders actively building with AI agents.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="b-icon">&#128227;</div>
+          <div>
+            <h4>Brand Visibility</h4>
+            <p>Logo placement across event signage, website, social media, email campaigns, and all promotional materials.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="b-icon">&#129309;</div>
+          <div>
+            <h4>Community Integration</h4>
+            <p>Become part of the growing ClawCamp community &mdash; ongoing access to a network of AI-first builders and adopters.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="b-icon">&#128176;</div>
+          <div>
+            <h4>On-Site Sales Channel</h4>
+            <p>Set up product demos and process orders directly at the event. Reach buyers at their most engaged moment.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="b-icon">&#127793;</div>
+          <div>
+            <h4>Early Community Access</h4>
+            <p>ClawCamp is growing fast. Get in early as a founding sponsor and shape the community alongside us.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 6: CURRENT SPONSORS ============ -->
+  <section class="slide slide-sponsors" id="slide-6">
+    <div class="slide-inner">
+      <h2>Current Event Sponsors</h2>
+      <div class="sponsor-grid">
+        <div class="sponsor-logo">you.com</div>
+        <div class="sponsor-logo">Apify</div>
+        <div class="sponsor-logo">The Agentic</div>
+        <div class="sponsor-logo">Fetch.ai</div>
+        <div class="sponsor-logo">Blitzscaling Ventures</div>
+        <div class="sponsor-logo">HackerSquad</div>
+        <div class="sponsor-logo">ASI:One</div>
+        <div class="sponsor-logo">STAK Ventures</div>
+        <div class="sponsor-logo">AIfy.io</div>
+        <div class="sponsor-logo">Nebius</div>
+        <div class="sponsor-logo">Donely.AI</div>
+        <div class="sponsor-logo">Founders Bay</div>
+        <div class="sponsor-logo">Pitchfreaks!</div>
+        <div class="sponsor-logo">Efficient Frontier Labs</div>
+        <div class="sponsor-logo">Constructive</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 7: CTA ============ -->
+  <section class="slide slide-cta" id="slide-7">
+    <div class="slide-inner">
+      <div class="claw-marks">///</div>
+      <h2>Let's Build the Agent Future Together</h2>
+      <p class="cta-sub">
+        Partner with ClawCamp to put NVIDIA DGX Spark in the hands of the people building the next generation of AI agents.
+      </p>
+      <a href="mailto:hello@clawcamp.us" class="cta-btn">Get In Touch</a>
+      <div class="contact-info">
+        <p><a href="https://clawcamp.us">clawcamp.us</a></p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Highlight active nav dot
+    const dots = document.querySelectorAll('.nav-dots a');
+    const sections = document.querySelectorAll('.slide');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          dots.forEach(d => d.classList.remove('active'));
+          const active = document.querySelector(`.nav-dots a[href="#${id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { threshold: 0.5 });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>

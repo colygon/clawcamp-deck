@@ -202,7 +202,7 @@ story.append(Paragraph(
 ))
 story.append(Spacer(1, 8))
 story.append(Paragraph(
-    "A comprehensive analysis of 31 platforms across 5 market segments",
+    "A comprehensive analysis of 30 platforms across 4 market segments",
     styles["CoverSub"],
 ))
 story.append(Spacer(1, 1.2 * inch))
