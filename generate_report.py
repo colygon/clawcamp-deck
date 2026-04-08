@@ -348,6 +348,31 @@ story.append(body(
     "and a source of platform stickiness — ClawHost's integrated ClawHub and KlausAI's "
     "pre-configured tool bundles are direct examples."
 ))
+story.append(body(
+    "<b>OpenClaw and the SaaSpocalypse narrative:</b> OpenClaw has become the primary technical "
+    "reference when analysts and investors explain the structural threat to per-seat SaaS "
+    "pricing. The mechanism is straightforward: an OpenClaw agent uses APIs and browser control "
+    "to act as an intelligent wrapper over existing SaaS tools, performing read/write operations "
+    "on behalf of many humans simultaneously. In the canonical CRM example, one OpenClaw agent "
+    "updating deals and logging calls for 50 sales reps means an organization might pay for one "
+    "API integration plan instead of 50 seats — compressing 90-99% of that vendor's seat-based "
+    "revenue. Because agents can also stitch data across tools (Gmail, CRM, ticketing, docs) "
+    "without buying separate integration SaaS, they compress demand for thin verticals like "
+    "email-productivity overlays and simple point solutions."
+))
+story.append(body(
+    "OpenClaw's viral adoption in early 2026 coincided with a rapid drawdown in software "
+    "valuations, with some analyses framing a $2T collapse in Software and Services as a market "
+    "reaction to agents proving they can perform labor, not just chat. VCs and commentators "
+    "repeatedly reference OpenClaw as the canonical example when explaining why the unit of "
+    "value moves from human seats to automated workflows and outcomes. For the hosting market "
+    "this report covers, the SaaSpocalypse narrative is a tailwind: as organizations replace "
+    "per-seat SaaS spending with agent infrastructure, the hosting platforms profiled here "
+    "capture a share of the reallocated budget. What survives in an OpenClaw world are systems "
+    "of record and infrastructure with strong data and compliance moats (core CRM, email "
+    "providers, cloud infrastructure) — because agents depend on them as backends — while "
+    "commodity SaaS whose main value is UI and light workflow gets squeezed."
+))
 
 story.append(tier("Hermes Agent"))
 story.append(body(
